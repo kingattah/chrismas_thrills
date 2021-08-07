@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="seasons.css">
+</head>
+
+<body>
+    
+    <section>
+
+        <audio controls autoplay="true" loop hidden>
+         <source src="ASSETS/Alan%20Walker%20-%20Faded.mp3"
+         type="audio/mpeg" volume="100"></source>
+    </audio>
+
+        <div id="snow"></div>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="IMAGES/logo-green-X.svg" class="logo"></a>
+            <div class="toggle" onClick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">home</a></li>
+                <li><a href="#">store</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">features</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>A MILE CLOSER TO A MAGICAL CHRISMAS</h2>
+                <P> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</P>
+                <a href="#">GO TO SHOP ></a>
+            </div>
+            <div class="ímgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./IMAGES/christmas_decorations_in_the_snow_201071.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./IMAGES/christmas_stocking_193063.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./IMAGES/decor-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./IMAGES/decor-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./IMAGES/golden_christmas_balls_200240.jpg)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li> <a href=""> <img src="ICONS/icons8_facebook_52px.png"> </a> </li>
+            <li> <a href=""> <img src="ICONS/icons8_twitter_64px.png"> </a> </li>
+            <li> <a href=""> <img src="ICONS/icons8_instagram_old_64px.png"> </a> </li>
+            <li> <a href=""> <img src="ICONS/icons8_whatsapp_64px.png"> </a> </li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        loop: true,
+    });
+
+    function toggleMenu() {
+        const menuToggle = document.querySelector('.toggle')
+        const navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
+    </script>
+    <script src="ASSETS/particles.js-master/particles.js-master/particles.min.js"></script>
+    <script src="ASSETS/particles.js-master/particles.js-master/demo/js/app.js"></script>
+</body>
+
+</html>
